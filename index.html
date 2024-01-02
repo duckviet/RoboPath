@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5f7092d521.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow+Semi+Condensed:wght@300&family=Manrope:wght@700&family=Noto+Sans+JP:wght@500&family=Questrial&family=Roboto:wght@900&family=Saira:wght@300&family=Vina+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Chess Board</title>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Robot finding their way <i class="fa-brands fa-android"></i></h2>
+      <form id="myForm" class="submitform">
+        <div class="form">
+          The board (nxm) with n =
+          <input
+            class="input w3-border"
+            type="text"
+            placeholder="n"
+            id="inputN"
+          />, m =
+          <input
+            class="input w3-border"
+            type="text"
+            placeholder="m"
+            id="inputM"
+          />
+          and the Robot start from
+          <input
+            class="input w3-border"
+            type="text"
+            placeholder="x1"
+            id="inputStartX"
+          />
+          ,
+          <input
+            class="input w3-border"
+            type="text"
+            placeholder="y1"
+            id="inputStartY"
+          />
+          end at
+          <input
+            class="input w3-border"
+            type="text"
+            placeholder="x2"
+            id="inputEndX"
+          />
+          ,
+          <input
+            class="input w3-border"
+            type="text"
+            placeholder="y2"
+            id="inputEndY"
+          />
+          <br />
+          <div style="font-size: medium; font-weight: 550">
+            (0 <i class="fa-solid fa-less-than-equal"></i> x
+            <i class="fa-solid fa-less-than-equal"></i> n-1, 0
+            <i class="fa-solid fa-less-than-equal"></i> y
+            <i class="fa-solid fa-less-than-equal"></i>
+
+            m-1)
+          </div>
+        </div>
+        <div class="handle">
+          <input
+            class="button-28"
+            type="button"
+            onclick="OnCreate()"
+            value="Create Map"
+          />
+          <input
+            class="button-28"
+            type="button"
+            onclick="SubmitFunc()"
+            value="Find way"
+          />
+        </div>
+      </form>
+      <div id="containBoard">
+        <div id="board"></div>
+        <h3 id="dont"></h3>
+      </div>
+    </div>
+    <script src="robot.js"></script>
+  </body>
+</html>
